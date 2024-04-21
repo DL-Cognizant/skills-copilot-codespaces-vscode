@@ -1,4 +1,4 @@
-//create web server3
+//create web server
 const express = require('express');
 const router = express.Router();
 const commentController = require('../controllers/commentController');
