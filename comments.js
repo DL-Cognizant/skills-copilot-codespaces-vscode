@@ -8,17 +8,3 @@ app.use(cors());
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
-
-//create an array of comments
-let comments = [
-    {
-        id: 1,
-        username: 'John',
-        comment: 'Hello there!'
-    },
-    {
-        id: 2,
-        username: 'Jane',
-        comment: 'Nice post!'
-    }   
-]
