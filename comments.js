@@ -1,14 +1,11 @@
-//create web server
+//create web server3
 const express = require('express');
-const app = express();
-app.use(express.json());
-const cors = require('cors');
-app.use(cors());
-// create a server that listens on port 3000
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
-// create a route that listens on the /comments path
-app.get('/comments', (req, res) => {
-    res.send('Comments will go here');
-});
+const router = express.Router();
+const commentController = require('../controllers/commentController');
+
+//handle requets to /comments
+router.get('/', commentController.getAllComments);
+router.post('/', commentController.addComment);
+router.get('/:id', commentController.getComment);
+router.put('/:id', commentController.updateComment);
+router.delete('/:id', commentController.deleteComment);
