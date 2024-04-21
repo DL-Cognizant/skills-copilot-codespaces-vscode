@@ -8,17 +8,7 @@ app.use(cors());
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
-
-//create an array of comments
-let comments = [
-    {
-        id: 1,
-        username: 'John',
-        comment: 'Hello there!'
-    },
-    {
-        id: 2,
-        username: 'Jane',
-        comment: 'Nice post!'
-    }   
-]
+// create a route that listens on the /comments path
+app.get('/comments', (req, res) => {
+    res.send('Comments will go here');
+});
